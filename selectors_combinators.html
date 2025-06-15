@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent1>h2{    
+            color:green;
+        }
+
+        .child1>h1{
+            background-image: url("https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt134818d279038650/6668df6434f6fb5cd48aac34/beautiful-flowers-rose.jpeg?q=70&width=3840&auto=webp");
+        }
+
+        .child2>h2{
+            background-color: yellow;
+        }
+
+        .child2+h3{
+            font-size: 30px;
+        }
+
+        #parent2>h2{
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="parent1">
+      <h1>combinators1</h1>
+      <h2>combinators2</h2>   <!--.parent1>h1+h2     .parent1>h1 ~ h2-->
+      <div class="child1">
+        <h1>selectors</h1>  <!--  .main>.parent1>child1>h1-->
+        <div class="child2">
+          <h2>simple</h2>    <!-- .main>.parent1>child1>child2>h2-->
+          <h1>selectors</h1>
+        </div>
+        <h3>42r batch</h3>    <!-- .child1>h1~h3-->
+      </div>
+    </div>
+    <div id="parent2">
+        <h2>css selectors</h2>    <!--  .main>.parent2>h2-->
+    </div>
+    </div>
+</body>
+</html>
